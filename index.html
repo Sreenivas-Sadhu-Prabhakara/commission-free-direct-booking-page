@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'self'">
+<title>Direct booking page generator for homestays · Open MSME</title>
+<meta name="description" content="Build a free, standalone booking page for a homestay, small hotel or resort: rooms, seasonal rates, child and extra-person charges, your own tax rate, and a WhatsApp enquiry link that arrives with the dates, the room and the total already in it.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Direct booking page generator for homestays">
+<meta property="og:description" content="Rooms, seasonal rates and policies in, one standalone booking page out — with a WhatsApp enquiry link carrying the dates, the room and the total. No commission, no backend.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/accent.css">
+<link rel="stylesheet" href="assets/tool.css">
+<link rel="stylesheet" href="assets/page.css">
+<script src="assets/theme-init.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <span class="dot"></span>
+      <b>Open MSME</b>
+      <span class="tag">booking page</span>
+    </a>
+    <span class="sp"></span>
+    <a class="home" href="https://sreenivas-sadhu-prabhakara.github.io/openmsme/">All tools</a>
+    <button class="themer" data-themer type="button">Theme</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Tourism, hospitality &amp; events · India &amp; Philippines</div>
+      <h1>Direct booking page generator for homestays and small hotels</h1>
+      <p class="lede">Enter your rooms, seasonal rates and policies and get one standalone booking page you can host free anywhere — with a WhatsApp enquiry link that arrives carrying the dates, the room, the guests and the total.</p>
+      <div class="who">
+        <span class="pill">Homestays, small hotels, resorts, farmstays</span>
+        <span class="pill">No commission, no monthly fee, no backend</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="cols calc">
+
+      <section class="card">
+        <h2>Inputs</h2>
+        <p class="cardnote">Everything here goes into the page you download. Nothing is sent anywhere — this tool makes no network request at all.</p>
+
+        <div class="field">
+          <label for="p-name">Property name</label>
+          <div class="inp">
+            <input type="text" id="p-name" autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="p-where">Where it is <span class="hint">town and state or province</span></label>
+          <div class="inp">
+            <input type="text" id="p-where" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="p-lede">One line about the place</label>
+          <div class="inp">
+            <input type="text" id="p-lede" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label>Currency</label>
+            <div class="seg" role="group" aria-label="Currency">
+              <button type="button" data-cur="INR" aria-pressed="true">₹ INR</button>
+              <button type="button" data-cur="PHP" aria-pressed="false">₱ PHP</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Page colour</label>
+            <div class="seg" role="group" aria-label="Page colour">
+              <button type="button" data-accent="rose" aria-pressed="true"><span class="sw sw-rose"></span>Rose</button>
+              <button type="button" data-accent="teal" aria-pressed="false"><span class="sw sw-teal"></span>Teal</button>
+              <button type="button" data-accent="indigo" aria-pressed="false"><span class="sw sw-indigo"></span>Indigo</button>
+              <button type="button" data-accent="ochre" aria-pressed="false"><span class="sw sw-ochre"></span>Ochre</button>
+              <button type="button" data-accent="forest" aria-pressed="false"><span class="sw sw-forest"></span>Forest</button>
+              <button type="button" data-accent="slate" aria-pressed="false"><span class="sw sw-slate"></span>Slate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+          <h3>How a guest reaches you</h3>
+
+          <div class="row2">
+            <div class="field">
+              <label for="c-cc">Country code <span class="hint">91 India, 63 Philippines</span></label>
+              <div class="inp has-pre">
+                <span class="pre">+</span>
+                <input type="text" id="c-cc" inputmode="numeric" autocomplete="off">
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-phone">WhatsApp number <span class="hint">without the country code</span></label>
+              <div class="inp">
+                <input type="text" id="c-phone" inputmode="tel" autocomplete="off" placeholder="98765 43210">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="c-email">Email for enquiries <span class="hint">optional</span></label>
+            <div class="inp">
+              <input type="text" id="c-email" inputmode="email" autocomplete="off" placeholder="stay@example.com">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label for="c-pay-label">How the deposit is paid <span class="hint">optional</span></label>
+              <div class="inp">
+                <input type="text" id="c-pay-label" autocomplete="off" placeholder="UPI, GCash, bank transfer">
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-pay-handle">Your handle for it</label>
+              <div class="inp">
+                <input type="text" id="c-pay-handle" autocomplete="off" placeholder="name@bank">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+          <h3>Room 1 <span class="hint">leave a name blank to skip the room</span></h3>
+          <div class="field">
+            <label for="r1-name">Name</label>
+            <div class="inp"><input type="text" id="r1-name" autocomplete="off"></div>
+          </div>
+          <div class="row3">
+            <div class="field">
+              <label for="r1-rate">Rate a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r1-rate" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r1-included">Rate covers</label>
+              <div class="inp has-suf"><input type="number" id="r1-included" min="1" step="1" inputmode="numeric"><span class="suf">pax</span></div>
+            </div>
+            <div class="field">
+              <label for="r1-max">Sleeps</label>
+              <div class="inp has-suf"><input type="number" id="r1-max" min="0" step="1" inputmode="numeric"><span class="suf">max</span></div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="r1-extra">Extra adult a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r1-extra" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r1-child">Child a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r1-child" min="0" step="any" inputmode="decimal"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+          <h3>Room 2</h3>
+          <div class="field">
+            <label for="r2-name">Name</label>
+            <div class="inp"><input type="text" id="r2-name" autocomplete="off"></div>
+          </div>
+          <div class="row3">
+            <div class="field">
+              <label for="r2-rate">Rate a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r2-rate" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r2-included">Rate covers</label>
+              <div class="inp has-suf"><input type="number" id="r2-included" min="1" step="1" inputmode="numeric"><span class="suf">pax</span></div>
+            </div>
+            <div class="field">
+              <label for="r2-max">Sleeps</label>
+              <div class="inp has-suf"><input type="number" id="r2-max" min="0" step="1" inputmode="numeric"><span class="suf">max</span></div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="r2-extra">Extra adult a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r2-extra" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r2-child">Child a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r2-child" min="0" step="any" inputmode="decimal"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+          <h3>Room 3</h3>
+          <div class="field">
+            <label for="r3-name">Name</label>
+            <div class="inp"><input type="text" id="r3-name" autocomplete="off"></div>
+          </div>
+          <div class="row3">
+            <div class="field">
+              <label for="r3-rate">Rate a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r3-rate" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r3-included">Rate covers</label>
+              <div class="inp has-suf"><input type="number" id="r3-included" min="1" step="1" inputmode="numeric"><span class="suf">pax</span></div>
+            </div>
+            <div class="field">
+              <label for="r3-max">Sleeps</label>
+              <div class="inp has-suf"><input type="number" id="r3-max" min="0" step="1" inputmode="numeric"><span class="suf">max</span></div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="r3-extra">Extra adult a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r3-extra" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r3-child">Child a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r3-child" min="0" step="any" inputmode="decimal"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+          <h3>Room 4</h3>
+          <div class="field">
+            <label for="r4-name">Name</label>
+            <div class="inp"><input type="text" id="r4-name" autocomplete="off"></div>
+          </div>
+          <div class="row3">
+            <div class="field">
+              <label for="r4-rate">Rate a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r4-rate" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r4-included">Rate covers</label>
+              <div class="inp has-suf"><input type="number" id="r4-included" min="1" step="1" inputmode="numeric"><span class="suf">pax</span></div>
+            </div>
+            <div class="field">
+              <label for="r4-max">Sleeps</label>
+              <div class="inp has-suf"><input type="number" id="r4-max" min="0" step="1" inputmode="numeric"><span class="suf">max</span></div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="r4-extra">Extra adult a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r4-extra" min="0" step="any" inputmode="decimal"></div>
+            </div>
+            <div class="field">
+              <label for="r4-child">Child a night</label>
+              <div class="inp has-pre"><span class="pre cur">₹</span><input type="number" id="r4-child" min="0" step="any" inputmode="decimal"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+          <h3>Seasons <span class="hint">a rate change over a date range, blank name to skip</span></h3>
+
+          <div class="field">
+            <label for="s1-name">Season 1</label>
+            <div class="inp"><input type="text" id="s1-name" autocomplete="off" placeholder="Peak — Christmas and New Year"></div>
+          </div>
+          <div class="row3">
+            <div class="field">
+              <label for="s1-from">From</label>
+              <input type="date" id="s1-from">
+            </div>
+            <div class="field">
+              <label for="s1-to">To <span class="hint">included</span></label>
+              <input type="date" id="s1-to">
+            </div>
+            <div class="field">
+              <label for="s1-uplift">Rate change</label>
+              <div class="inp has-suf"><input type="number" id="s1-uplift" step="any" inputmode="decimal"><span class="suf">%</span></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="s2-name">Season 2</label>
+            <div class="inp"><input type="text" id="s2-name" autocomplete="off" placeholder="Monsoon"></div>
+          </div>
+          <div class="row3">
+            <div class="field">
+              <label for="s2-from">From</label>
+              <input type="date" id="s2-from">
+            </div>
+            <div class="field">
+              <label for="s2-to">To</label>
+              <input type="date" id="s2-to">
+            </div>
+            <div class="field">
+              <label for="s2-uplift">Rate change</label>
+              <div class="inp has-suf"><input type="number" id="s2-uplift" step="any" inputmode="decimal"><span class="suf">%</span></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="s3-name">Season 3</label>
+            <div class="inp"><input type="text" id="s3-name" autocomplete="off"></div>
+          </div>
+          <div class="row3">
+            <div class="field">
+              <label for="s3-from">From</label>
+              <input type="date" id="s3-from">
+            </div>
+            <div class="field">
+              <label for="s3-to">To</label>
+              <input type="date" id="s3-to">
+            </div>
+            <div class="field">
+              <label for="s3-uplift">Rate change</label>
+              <div class="inp has-suf"><input type="number" id="s3-uplift" step="any" inputmode="decimal"><span class="suf">%</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slot">
+          <h3>Tax</h3>
+          <div class="row2">
+            <div class="field">
+              <label for="p-tax-label">What it is called <span class="hint">GST, VAT, local tax</span></label>
+              <div class="inp"><input type="text" id="p-tax-label" autocomplete="off"></div>
+            </div>
+            <div class="field">
+              <label for="p-tax-pct">Rate <span class="hint">your own rate</span></label>
+              <div class="inp has-suf"><input type="number" id="p-tax-pct" min="0" step="any" inputmode="decimal"><span class="suf">%</span></div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Your room rates above are</label>
+            <div class="seg" role="group" aria-label="Whether the rates include tax">
+              <button type="button" data-tax="extra" aria-pressed="true">before tax</button>
+              <button type="button" data-tax="included" aria-pressed="false">tax included</button>
+            </div>
+          </div>
+          <div class="note">No tax rate is built into this tool, on purpose. Accommodation tax is set by the state in India and by the city or municipality in the Philippines, and it changes. Put in the rate that applies to you, or leave it at zero if none does.</div>
+        </div>
+
+        <div class="slot">
+          <h3>Policies</h3>
+          <div class="row3">
+            <div class="field">
+              <label for="p-childfree">Children free under</label>
+              <div class="inp has-suf"><input type="number" id="p-childfree" min="0" max="18" step="1" inputmode="numeric"><span class="suf">yrs</span></div>
+            </div>
+            <div class="field">
+              <label for="p-minnights">Minimum stay</label>
+              <div class="inp has-suf"><input type="number" id="p-minnights" min="0" step="1" inputmode="numeric"><span class="suf">nts</span></div>
+            </div>
+            <div class="field">
+              <label for="p-deposit">Deposit to confirm</label>
+              <div class="inp has-suf"><input type="number" id="p-deposit" min="0" max="100" step="any" inputmode="decimal"><span class="suf">%</span></div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="p-checkin">Check-in from</label>
+              <div class="inp"><input type="text" id="p-checkin" autocomplete="off" placeholder="1 pm"></div>
+            </div>
+            <div class="field">
+              <label for="p-checkout">Check-out by</label>
+              <div class="inp"><input type="text" id="p-checkout" autocomplete="off" placeholder="11 am"></div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="p-cancel">Cancellation</label>
+            <div class="inp"><input type="text" id="p-cancel" autocomplete="off"></div>
+          </div>
+          <div class="field">
+            <label for="p-notes">Good to know</label>
+            <div class="inp"><input type="text" id="p-notes" autocomplete="off"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card sticky">
+        <h2>Result</h2>
+        <p class="cardnote">A test booking, priced by the rules above. This is the same arithmetic the page you download will do on a guest&rsquo;s phone.</p>
+
+        <div class="row2">
+          <div class="field">
+            <label for="q-in">Check-in</label>
+            <input type="date" id="q-in">
+          </div>
+          <div class="field">
+            <label for="q-out">Check-out</label>
+            <input type="date" id="q-out">
+          </div>
+        </div>
+        <div class="field">
+          <label for="q-room">Room</label>
+          <select id="q-room"></select>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="q-adults">Adults</label>
+            <div class="inp"><input type="number" id="q-adults" min="0" max="20" step="1" inputmode="numeric"></div>
+          </div>
+          <div class="field">
+            <label for="q-ages">Children&rsquo;s ages</label>
+            <div class="inp"><input type="text" id="q-ages" inputmode="numeric" placeholder="7, 3"></div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="q-guest">Guest name <span class="hint">to test the link</span></label>
+            <div class="inp"><input type="text" id="q-guest" autocomplete="off"></div>
+          </div>
+          <div class="field">
+            <label for="q-note">Their note</label>
+            <div class="inp"><input type="text" id="q-note" autocomplete="off"></div>
+          </div>
+        </div>
+
+        <div class="result-primary">
+          <div class="k">Total the guest pays</div>
+          <div class="v" id="out-total">—</div>
+          <div class="sub" id="out-sub">Fill in a room and some dates.</div>
+        </div>
+
+        <div class="note" id="out-flags" hidden></div>
+
+        <table class="breakdown">
+          <tbody id="out-rows"></tbody>
+        </table>
+
+        <h3>The enquiry link</h3>
+        <p class="cardnote" id="out-linknote">—</p>
+        <pre class="wrapped" id="out-url">—</pre>
+        <div class="linkrow">
+          <a class="btn primary" id="wa-test" rel="noopener noreferrer" target="_blank">Open it in WhatsApp</a>
+          <a class="btn ghost" id="mail-test">Open it in email</a>
+        </div>
+        <details class="assumptions">
+          <summary>The message it carries</summary>
+          <pre class="wrapped" id="out-msg">—</pre>
+        </details>
+
+        <div class="btnrow">
+          <button class="btn ghost" id="print" type="button">Print / Save PDF</button>
+          <button class="btn ghost" id="reset" type="button">Reset</button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="card">
+      <div class="previewhead">
+        <h2>Your booking page</h2>
+        <p class="filemeta" id="out-filemeta">—</p>
+      </div>
+      <p class="cardnote">One HTML file. Save it, then put it anywhere that serves a file for free — GitHub Pages, Netlify, Cloudflare Pages, a folder on your own site — or send it to a guest as an attachment. It carries its own styling and its own calculator, asks the network for nothing, and tracks nobody.</p>
+      <div class="btnrow">
+        <button class="btn primary" id="download" type="button">Download the page</button>
+        <button class="btn ghost" id="copy" type="button">Copy the HTML</button>
+      </div>
+      <p class="cardnote" id="out-saved" hidden>—</p>
+
+      <h3>Preview</h3>
+      <p class="cardnote">The page exactly as a guest first sees it, drawn with the file&rsquo;s own stylesheet. The date picker and the live total are switched off here; they come alive in the saved file, and the test booking above is that same calculation.</p>
+      <div class="pagebox" id="preview"></div>
+
+      <details class="assumptions">
+        <summary>The whole file, as text</summary>
+        <pre class="sourcebox" id="out-source">—</pre>
+      </details>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="prose">
+      <h2>How it works</h2>
+      <p>The page is priced one night at a time. Each night from the arrival date to the night before departure is looked up against your seasons, and the first season that covers it sets that night&rsquo;s rate as the room&rsquo;s rate plus or minus your percentage. A stay that runs into a peak period is therefore split automatically: two nights at the standard rate and two at the peak rate, not four at whichever rate happened to apply on the day of arrival.</p>
+      <p>On top of the nights come the people the rate does not cover. Adults beyond the number the rate covers are charged your extra-adult rate for every night. Children are charged your child rate for every night, except those below the free age, who are charged nothing — but every child still counts towards how many the room sleeps, because a bed is a bed. If the party is larger than the room, the page says so and refuses to build an enquiry link rather than quote an impossible booking.</p>
+      <p>Tax is applied last, at the rate you entered, and you say whether your rates already include it. If they do, the tax is worked backwards out of the total rather than added to it, so the figure a guest sees is the figure you quoted.</p>
+      <p>In short: <code>nights = checkout − checkin</code>, <code>room = Σ rate × (1 + season%)</code> for each night, <code>extras = extra adults × rate × nights + paying children × rate × nights</code>, <code>total = (room + extras) × (1 + tax%)</code> when tax is added, or <code>total = room + extras</code> with <code>tax = total × rate ÷ (100 + rate)</code> when it is already inside. The deposit is a percentage of that total.</p>
+
+      <h2>Why the link matters more than the page</h2>
+      <p>A booking page without a server cannot hold a reservation, and this tool does not pretend otherwise. What it can do is make the first message arrive complete. The WhatsApp link is built by percent-encoding the whole message, which is what keeps a space, an ampersand, a plus sign, a newline, an emoji or a name in Devanagari, Kannada or Tamil intact on the way. A plus sign left unencoded in a web address is read back as a space, so <code>Jo+Ann</code> becomes <code>Jo Ann</code> and <code>2+2 guests</code> becomes <code>2 2 guests</code> — the kind of fault nobody reports, because the guest simply gives up. The link is shown here in full, before you publish it, and an email version is built the same way with the line endings mail clients expect.</p>
+
+      <details class="assumptions">
+        <summary>Assumptions &amp; rates</summary>
+        <ul>
+          <li><b>No tax rate is built in.</b> Accommodation tax is a state matter in India and a city or municipal matter in the Philippines, and both change. The rate and its name are yours to enter; zero means none is shown.</li>
+          <li>Nights are counted as dates, not as hours: arrival to departure, with the departure night not charged. Dates are handled as plain calendar dates throughout, so no time zone or daylight change can move a night.</li>
+          <li>Each night takes the rate of the first season listed that covers it. Overlaps are reported, and the season listed first wins. A season whose dates are unusable, or that ends before it begins, is ignored.</li>
+          <li>A season rate change below −100% is held at −100%, so a night can be free but never negative.</li>
+          <li>Extra-adult and child rates are flat: they are not changed by the season.</li>
+          <li>Children below the free age are not charged but are still counted against how many the room sleeps. A child exactly at the free age pays.</li>
+          <li>If the rate-covers field is blank it is read as one adult; if sleeps is blank the occupancy limit is not checked, and both are reported to you.</li>
+          <li>The deposit is a percentage of the final total including tax, and the balance is the rest. The page states the deposit; it cannot take it.</li>
+          <li>A booking is refused, with the reason shown and no link built, when the departure is before the arrival, when both dates are the same day, when no adult is on the booking, when a date is not a real date, or when the party is larger than the room.</li>
+          <li>WhatsApp numbers are reduced to digits with the country code in front, because that is all wa.me accepts. A leading <code>+</code> or <code>00</code> is read as a full international number; a leading <code>0</code> is dropped as a trunk prefix; a ten-digit Indian or Philippine number that happens to begin with its own country code is not mistaken for one that already carries it.</li>
+          <li>Money is rounded to two decimal places at each line and shown whole when it is whole.</li>
+        </ul>
+      </details>
+
+      <div class="note">An estimate and a brochure, not a reservation system. The page you download cannot take a payment, cannot hold a room and cannot check availability: it states your rates and hands a complete enquiry to you, and the booking exists when you reply. Check the total against your own tariff card before you publish, and confirm the tax position with your own accountant or your local authority. Nothing you type here leaves your device, and the page you get collects nothing from your guests.</div>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Open MSME · open-source tool for MSMEs in India &amp; the Philippines · MIT</span>
+    <span><a href="https://sreenivas-sadhu-prabhakara.github.io/openmsme/">All tools</a></span>
+  </div>
+</footer>
+
+<script src="assets/ui.js"></script>
+<script src="assets/booking.js"></script>
+<script src="assets/calc.js"></script>
+</body>
+</html>

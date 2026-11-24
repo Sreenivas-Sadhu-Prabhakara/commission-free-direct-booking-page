@@ -1,0 +1,55 @@
+/* The few controls this tool needs that the shared kit does not style, plus
+   the frame the generated page is previewed in. Everything else is the kit. */
+
+/* date fields, matched to the kit's text and number fields */
+.field input[type=date] {
+  width: 100%; font: inherit; font-size: .95rem; padding: 11px 13px; border-radius: 9px;
+  border: 1px solid var(--line-2); background: var(--surface); color: var(--ink);
+}
+.field input[type=date]:focus { outline: 2px solid var(--tool); outline-offset: 1px; border-color: var(--tool); }
+
+/* three across on a wide screen, two when it is tight */
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .row3 { grid-template-columns: 1fr 1fr; } }
+
+/* A text or number input has an intrinsic minimum width of about twenty
+   characters, and a grid track will not go below its content's minimum. Left
+   alone that pushes a two-up row past a 360px screen and puts a horizontal
+   scrollbar on the whole page. Let the fields shrink instead. */
+.row2 > *, .row3 > * { min-width: 0; }
+.field input, .field select { min-width: 0; }
+
+/* one repeated block: a room, or a season */
+.slot { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 14px; }
+.slot h3 { margin: 0 0 10px; font-size: .95rem; }
+.slot h3 .hint { font-weight: 400; color: var(--ink-3); font-size: .78rem; }
+.cardnote { font-size: .82rem; color: var(--ink-3); margin: 0 0 14px; }
+
+/* colour swatches on the accent picker */
+.sw { display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: 6px; }
+.sw-rose { background: #be185d; }
+.sw-teal { background: #0f766e; }
+.sw-indigo { background: #4338ca; }
+.sw-ochre { background: #b45309; }
+.sw-forest { background: #15803d; }
+.sw-slate { background: #334155; }
+
+/* a link that cannot be followed yet, because the booking or the number is
+   not usable, says so by looking spent rather than by vanishing */
+.btn[aria-disabled=true] { opacity: .45; cursor: not-allowed; }
+
+/* several things can be wrong at once */
+.note div + div { margin-top: 6px; }
+
+/* the finished link, shown in full so it can be read before it is published */
+pre.wrapped { white-space: pre-wrap; word-break: break-all; font-size: .76rem; }
+pre.sourcebox { max-height: 340px; overflow: auto; font-size: .74rem; }
+.filemeta { font-family: var(--mono); font-size: .78rem; color: var(--ink-3); margin: 10px 0 0; }
+.linkrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+
+/* The preview: the generated page's own stylesheet, inside a frame. The frame
+   is narrower than a phone screen, because it sits inside a card inside the
+   page, so it scrolls sideways rather than pushing the whole tool wide. */
+.pagebox { border: 1px solid var(--line-2); border-radius: var(--radius); overflow-x: auto; margin-top: 14px; }
+.pagebox > .bp { padding: 0 0 8px; }
+.previewhead { display: flex; gap: 12px; flex-wrap: wrap; align-items: baseline; justify-content: space-between; }

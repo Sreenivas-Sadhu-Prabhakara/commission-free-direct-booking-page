@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'self'">
+<title>Booking engine tests · Open MSME</title>
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/accent.css">
+<script src="../assets/theme-init.js"></script>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Self-test</div>
+      <h1>Booking engine tests</h1>
+      <p class="lede">The table-driven suite from <code>tests/booking.test.js</code>, run in this browser: the night-by-night rate maths, the seasonal split, the extra-person and child rules, both tax modes, every guard, phone normalisation, and the enquiry link round-tripped back out of a real URL parser.</p>
+    </div>
+  </section>
+  <div class="wrap">
+    <section class="card">
+      <h2 id="summary">Running…</h2>
+      <table class="breakdown">
+        <thead><tr><th>Group</th><th class="num">Assertions</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <pre id="fails" hidden></pre>
+      <p class="assumptions">The two groups skipped here need a file system and a child process: that <code>assets/page.css</code> is the generated page&rsquo;s stylesheet byte for byte, and that the engine written into a finished page parses, loads and reproduces every scenario. Run <code>node tests/booking.test.js</code> for the whole suite.</p>
+    </section>
+  </div>
+</main>
+<script src="../assets/booking.js"></script>
+<script src="booking.test.js"></script>
+</body>
+</html>
